@@ -3,22 +3,25 @@
 
 if (($ARGV[0] =~ m/^-+he{0,1}l{0,1}p{0,1}$/) or (length($ARGV[0]) == 0)){
 	die "
-Try:\nperl concat_fasta.pl [ --suffix | --prefix ] your_pattern --outfile output [ --filter filter_pattern ] [ -n | -p ]\n
-	--suffix, --prefix         A string of characters present only in the FASTA files you wish to concatenate.
-				   An example would be \".fasta\" or \".fas\" (without quotation marks) in the case of the suffix,
-				   or \"xxx\" or \"sample\" at the begining of the file in the case of the prefix.
-	--outfile	           The name of file where you are saving the concatenated data.
-				   By default the format is FASTA, unless the following flags are stated.
-	--filter		   [Optional] Will include only the terminals that include the pattern.
-				   This can also be a text file with a list of filter patterns.
-	--no-concat		   Use only if you just want to filter records while keeping individual gene alignments.
-	-n         	           [Optional] The output format is NEXUS.
-				   The partitions will be printed at the end of the file in NEXUS style.
-	-p          	    	   [Optional] The output format is PHYLIP.
-				   Partitions are printed to the screen or can be printed to a file by using \">\"
+Try:
+perl concat_fasta.pl [ --suffix | --prefix ] your_pattern --outfile output [ --filter filter_pattern ] [ -n | -p ]
+
+     --suffix, --prefix         A string of characters present only in the FASTA files you wish to concatenate.
+                                An example would be ".fasta" or ".fas" (without quotation marks) in the case of the suffix,
+                                or "xxx" or "sample" at the begining of the file in the case of the prefix.
+     --outfile                  The name of file where you are saving the concatenated data.
+                                By default the format is FASTA, unless the following flags are stated.
+     --filter    [Optional]     Will include only the terminals that include the pattern.
+                                This can also be a text file with a list of filter patterns.
+     --no-concat                Use only if you just want to filter records while keeping individual gene alignments.
+     -n          [Optional]     The output format is NEXUS.
+                                The partitions will be printed at the end of the file in NEXUS style.
+     -p          [Optional]     The output format is PHYLIP.
+                                Partitions are printed to the screen or can be printed to a file by using ">"
+
 Example:
 
-perl concat_fasta.pl --suffix .fasta --outfile concat.phylip --filter sp3 -p > part.txt)\n\n";
+perl concat_fasta.pl --suffix .fasta --outfile concat.phylip --filter sp3 -p > part.txt\n\n";
 }
 
 my $suffix;
