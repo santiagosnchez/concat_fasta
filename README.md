@@ -36,5 +36,5 @@ Use the `-h` flag for more details:
 
     Example:
     
-    perl concat_fasta.pl --suffix .fasta --outfile concat.phylip --filter sp3 -p > part.txt)
+    perl concat_fasta.pl --suffix .fasta --outfile concat.phylip --filter sp3 -p > part.txt
 
