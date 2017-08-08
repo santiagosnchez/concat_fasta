@@ -7,8 +7,8 @@ Try:
 perl concat_fasta.pl [ --suffix | --prefix ] your_pattern --outfile output [ --filter filter_pattern ] [ -n | -p ]
 
      --suffix, --prefix         A string of characters present only in the FASTA files you wish to concatenate.
-                                An example would be ".fasta" or ".fas" (without quotation marks) in the case of the suffix,
-                                or "xxx" or "sample" at the begining of the file in the case of the prefix.
+                                An example would be ".fasta" or \".fas\" (without quotation marks) in the case of the suffix,
+                                or \"xxx\" or \"sample\" at the begining of the file in the case of the prefix.
      --outfile                  The name of file where you are saving the concatenated data.
                                 By default the format is FASTA, unless the following flags are stated.
      --filter    [Optional]     Will include only the terminals that include the pattern.
@@ -17,7 +17,7 @@ perl concat_fasta.pl [ --suffix | --prefix ] your_pattern --outfile output [ --f
      -n          [Optional]     The output format is NEXUS.
                                 The partitions will be printed at the end of the file in NEXUS style.
      -p          [Optional]     The output format is PHYLIP.
-                                Partitions are printed to the screen or can be printed to a file by using ">"
+                                Partitions are printed to the screen or can be printed to a file by using \">\"
 
 Example:
 
